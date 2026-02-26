@@ -1,0 +1,32 @@
+CASO 2 — Modelado de producción diaria de oro (Regresión)
+
+Problema 
+
+La planta de beneficio de una operación minera aurífera procesa diariamente grandes volúmenes de material proveniente del frente de explotación. La gerencia desea estimar con mayor precisión la producción diaria de oro (kg) en función de variables operativas para mejorar la planificación financiera y energética.
+Se cuenta con datos históricos diarios con las siguientes variables:
+1.	toneladas_procesadas
+2.	horas_operacion
+3.	eficiencia_planta (%)
+4.	temperatura_operativa (°C)
+5.	nivel_mantenimiento (escala 1–5)
+6.	produccion_oro_kg (variable objetivo)
+
+Tu Mision:
+
+Implemente la función: def predecir_produccion
+
+La función debe:
+1.	Separar variables independientes y variable dependiente.
+2.	Dividir los datos en entrenamiento y prueba.
+3.	Permitir seleccionar el modelo:
+    a.	"linear" → LinearRegression
+    b.	"ridge" → Ridge
+4.	Entrenar el modelo seleccionado.
+5.	Evaluar desempeño utilizando:
+    a.	MAE
+    b.	RMSE
+    c.	R²
+6.	Retornar:
+    a.	Diccionario con métricas
+    b.	Coeficientes del modelo
+    c.	Modelo entrenado

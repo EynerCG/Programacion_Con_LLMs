@@ -1,0 +1,38 @@
+CASO 3 — Detección temprana de fallas en maquinaria pesada
+
+Problema
+
+En minería subterránea y a cielo abierto, la disponibilidad mecánica de equipos como cargadores 
+LHD y camiones articulados es crítica para la continuidad operativa. La empresa ha implementado 
+sensores IoT que registran variables operativas cada hora.Se dispone de un dataset con:
+
+1.	vibracion
+2.	temperatura_motor
+3.	presion_hidraulica
+4.	horas_uso
+5.	nivel_combustible
+6.	falla (1 si ocurrió falla en las siguientes 24 horas, 0 en caso contrario) El dataset presenta
+un fuerte desbalance:
+1.	5% registros con falla
+2.	95% sin falla
+
+
+Tu Mision
+
+Implemente la función: def detectar_fallas La función debe:
+
+1.	Separar variables predictoras y objetivo.
+2.	Dividir el dataset en entrenamiento y prueba.
+3.	Manejar el desbalance utilizando:
+   a.	class_weight='balanced' o
+   b.	ajuste manual de pesos.
+4.	Entrenar un RandomForestClassifier.
+5.	Evaluar el modelo utilizando:
+   a.	Recall
+   b.	Precision
+   c.	ROC-AUC
+6.	Obtener importancia de variables.
+7.	Retornar:
+   a.	Métricas
+   b.	Importancia de variables
+   c.	Modelo entrenado

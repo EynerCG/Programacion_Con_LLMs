@@ -1,0 +1,41 @@
+CASO 1 — Clasificación de ley mineral en frente de explotación
+
+Problema
+Una compañía minera dedicada a la extracción de oro en minería subterránea realiza muestreos
+sistemáticos en los frentes de explotación antes de enviar el material a planta. 
+Cada muestra es analizada en laboratorio para determinar su composición geoquímica
+y propiedades físicas.
+Debido a restricciones operativas, la empresa desea implementar un modelo predictivo
+que permita clasificar anticipadamente la calidad del mineral (alta o baja ley)
+antes del análisis final de laboratorio, con el fin de optimizar la logística de transporte
+y el uso del molino.
+Se dispone de un conjunto de datos históricos con las siguientes variables:
+
+1. profundidad (m)
+2. concentracion_arsenico (ppm)
+3. concentracion_cobre (ppm)
+4. densidad_roca (g/cm³)
+humedad (%)
+ley_oro (g/tonelada)
+
+Se define: Alta Ley = 1 si 𝑙𝑒𝑦_𝑜𝑟𝑜≥ 2.5 𝑔/𝑡
+
+Alta Ley= 1 si ley_oro ≥ 2.5g/t
+Baja Ley = 0 en otro caso
+
+Tu mision: Implemente la función def clasificar_ley_oro(df: pd.DataFrame, test_size: float)
+
+La función debe:
+1.	Crear la variable objetivo binaria.
+2.	Separar variables predictoras y variable objetivo.
+3.	Dividir el conjunto en entrenamiento y prueba según test_size.
+4.	Estandarizar las variables numéricas.
+5.	Entrenar un modelo de clasificación utilizando:
+o	LogisticRegression o
+o	RandomForestClassifier
+6.	Evaluar el modelo sobre el conjunto de prueba.
+7.	Retornar:
+    a. Accuracy
+    b. F1-score
+    c. Matriz de confusión
+    d. Modelo entrenado

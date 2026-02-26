@@ -1,0 +1,43 @@
+CASO 4 — Preparación de datos para predicción del margen de ganancia en comercialización de oro
+
+Problema
+
+Una empresa dedicada a la comercialización de oro registra diariamente información asociada a sus
+operaciones de compra y venta en distintas sedes a nivel nacional. El objetivo estratégico del área
+financiera es desarrollar un modelo predictivo que permita estimar el margen de ganancia esperado
+por transacción, con el fin de optimizar decisiones comerciales y mitigar riesgos asociados a la 
+volatilidad del mercado.
+El conjunto de datos histórico se encuentra almacenado en un DataFrame de pandas y contiene
+las siguientes columnas:
+
+1.	precio_internacional_usd → Precio del oro por onza en dólares.
+2.	tasa_cambio_cop → Tasa de cambio USD/COP del día de la transacción.
+3.	pureza_porcentaje → Nivel de pureza del oro adquirido.
+4.	cantidad_gramos → Cantidad de oro negociado en gramos.
+5.	costo_logistico_cop → Costos logísticos asociados a la operación.
+6.	volatilidad_mercado → Indicador numérico de volatilidad del mercado.
+7.	margen_ganancia → Variable objetivo (target).
+
+Sin embargo, el dataset presenta los siguientes inconvenientes:
+
+1.	Valores numéricos faltantes (NaN).
+2.	Variables medidas en escalas significativamente diferentes.
+3.	Registros consolidados desde distintas sedes con posibles inconsistencias en la calidad del dato.
+
+Tu Mision:
+
+Implemente la siguiente función: def preparar_datos La función debe realizar las siguientes
+operaciones:
+
+1.	Separar:
+   a.	La matriz de características X
+   b.	El vector objetivo y, definido dinámicamente por el parámetro target_col.
+2.	Imputar los valores faltantes en X utilizando:
+   a.	SimpleImputer de sklearn
+   b.	Estrategia: media (strategy="mean").
+3.	Escalar las características imputadas utilizando:
+   a.	StandardScaler de sklearn
+   b.	Garantizando:
+      -	Media = 0
+      -	Desviación estándar = 1
+4.	Convertir los resultados a estructuras numpy.ndarray
