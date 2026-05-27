@@ -91,3 +91,9 @@ def generar_caso_de_uso_produccion():
     }
     
     return input_data, output_data
+
+args, output = generar_caso_de_uso_produccion()
+
+resultado = predecir_produccion(**args)
+
+print(resultado)
