@@ -1,0 +1,7 @@
+Pregunta 0351
+
+La pregunta 0351 fue clasificada por el verificador como "usecase generator error" y no como "answer incorrect". Esto indica que el sistema no encontró una respuesta incorrecta en la solución entregada, sino que el problema se presentó durante la generación o validación automática del caso de prueba.
+
+Al revisar el reporte, se observa además que la entrega no contiene respuestas incorrectas y que las demás preguntas fueron evaluadas correctamente. Por esta razón, considero que el inconveniente no está relacionado con la lógica implementada en mi solución, sino con el proceso utilizado por el generador de casos de uso para esta pregunta en particular.
+
+Debido a lo anterior, solicito que la solución de la pregunta 0351 sea considerada válida, ya que el error reportado corresponde al generador de casos de prueba y no a un resultado incorrecto producido por mi implementación.
